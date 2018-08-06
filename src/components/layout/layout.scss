@@ -1,0 +1,79 @@
+$imgPath: "../../assets/img/";
+html,
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+}
+
+.page__bg {
+    // background: url($imgPath+"header.png") center no-repeat;
+    // background: #595c60;
+    // -webkit-clip-path: polygon(0 0, 0% 100%, 77% 0);
+    // clip-path: polygon(0 0, 0% 100%, 77% 0);
+    // background-size: cover;
+    // height: 100vh;
+    // width: 100%;
+    // position: absolute;
+    // z-index: -1;
+    background: #ffffff;
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9);
+    align-items: center;
+    &__logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 100px;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    ul {
+        display: flex;
+        width: 100%;
+        margin: 0 50px;
+        list-style: none;
+        justify-content: space-between;
+        li {
+            display: flex;
+            margin: 10px;
+        }
+    }
+}
+    
+.about-me {
+    &__bg {
+        height: 800px;
+        width: 800px;
+        background-color: red;
+        -webkit-clip-path: polygon(0 46%, 100% 100%, 0 100%);
+        clip-path: polygon(0 46%, 100% 100%, 0 100%);
+    }
+}
+
+.about-me,
+.my-skills,
+.projects,
+.contact {
+    height: 600px;    
+    }
