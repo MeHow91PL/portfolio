@@ -3,6 +3,7 @@ import * as React from 'react';
 import headerBg from '../../assets/img/header.png';
 import headerPhoto from '../../assets/img/headerPhoto.png';
 import Header from './header/header';
+import Section from './section/section';
 
 interface IProps {
     history: object
@@ -42,17 +43,9 @@ export default class Layout extends React.Component<IProps> {
                         }}
                 />
                 
-                 {/* <Section style={
-                     {height: '500px'}
-                 } >
-                    <Section.Background 
-                    style={
-                        {
-                            background: '#003853',
-                            height: '200px'
-                        }
-                    } />
-                 </Section>  */}
+                 <Section  >
+                   asd
+                 </Section> 
 
                 <article className={`about-me`}>
                     <div className={`about-me__bg`} />
