@@ -3,11 +3,9 @@ import './header.css';
 
 
 interface IHeaderProps {
-    photoPosition?: 'left' | 'right',
-    text: { majorTxt: string, minorTxt: string },
-    photo: string,
     bgImg: string,
-    layout: HeaderLayout
+    photo: string,
+    text: { majorTxt: string, minorTxt: string }
 }
 
 export enum HeaderLayout {
@@ -27,21 +25,27 @@ const Header = (props: IHeaderProps) => {
             </div>
 
             <div className={`header__container`}
-                style={{
-                    gridTemplateAreas: `'${props.layout === HeaderLayout.photoLeft ? 'photo title' : 'title photo'}'`
-                }}
             >
                 <section className={`header__title`}>
                     <h1>{props.text.majorTxt}</h1>
                     <h3>{props.text.minorTxt}</h3>
                 </section>
-                <section
-                    className={`header__photo`}
-                    style={{
-                        backgroundImage: `url(${props.photo})`
-                    }}
-                />
-
+                <section className={`header__desc`}>
+                    <div
+                        className={`header__desc__photo`}
+                        style={{
+                            backgroundImage: `url(${props.photo})`
+                        }}
+                    />
+                    <div className={`hr`} />
+                    <div
+                        className={`header__desc__txt`}
+                    >
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, voluptas?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, voluptas?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, voluptas?
+                    </div>
+                </section>
             </div>
         </header>
     );

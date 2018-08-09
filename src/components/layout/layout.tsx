@@ -1,9 +1,8 @@
 import * as React from 'react';
-import Header, { HeaderLayout } from './header/header';
 
 import headerBg from '../../assets/img/header.png';
 import headerPhoto from '../../assets/img/headerPhoto.png';
-import Section from './section/section';
+import Header from './header/header';
 
 interface IProps {
     history: object
@@ -36,7 +35,6 @@ export default class Layout extends React.Component<IProps> {
                 <Header
                     photo={headerPhoto}
                     bgImg={headerBg}
-                    layout={HeaderLayout.photoRight}
                     text={
                         {
                             majorTxt: 'Consectetur aute et eiusmod',
@@ -44,7 +42,7 @@ export default class Layout extends React.Component<IProps> {
                         }}
                 />
                 
-                 <Section style={
+                 {/* <Section style={
                      {height: '500px'}
                  } >
                     <Section.Background 
@@ -54,7 +52,7 @@ export default class Layout extends React.Component<IProps> {
                             height: '200px'
                         }
                     } />
-                 </Section> 
+                 </Section>  */}
 
                 <article className={`about-me`}>
                     <div className={`about-me__bg`} />
