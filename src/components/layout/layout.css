@@ -4,6 +4,10 @@ body {
   margin: 0;
   padding: 0; }
 
+a {
+  color: inherit;
+  text-decoration: none; }
+
 .hr {
   align-self: center;
   border-top: 1px solid rgba(0, 0, 0, 0.5);
@@ -20,7 +24,7 @@ body {
   background: #ffffff; }
 
 .topbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   display: flex;

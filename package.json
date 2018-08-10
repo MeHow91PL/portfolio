@@ -5,6 +5,7 @@
   "dependencies": {
     "@types/history": "^4.7.0",
     "@types/react-redux": "^6.0.6",
+    "aos": "^2.3.3",
     "autoprefixer": "7.1.6",
     "babel-jest": "^22.1.0",
     "babel-loader": "^7.1.2",

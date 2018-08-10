@@ -10,12 +10,40 @@ interface IProps {
 }
 
 export default class Layout extends React.Component<IProps> {
+    constructor(props: any) {
+        super(props);
+    }
+
+    public scrollTo(anchor: string) {
+        const doc: HTMLDivElement | null = document.querySelector('#' + anchor);
+        if (doc !== null) {
+            window.scrollTo(0,doc.offsetTop);
+
+            for (let i = 0; i < 2000; i+=50) {
+                setTimeout(() => {
+                    window.scroll(0, i);
+                }, 200);
+                
+            }
+        }
+    }
+
     public render() {
 
         return (
             <div>
                 <div className={`page__bg`} />
 
+                <Header
+                    click={this.scrollTo}
+                    photo={headerPhoto}
+                    bgImg={headerBg}
+                    text={
+                        {
+                            majorTxt: 'Cześć! Nazywam się Michał Kokosiński',
+                            minorTxt: 'veniam ipsum duis ullamco labore nostrud pariatur adipisicin'
+                        }}
+                />
                 <section className={`topbar`}>
                     <div className="wrapper">
                         <section className={`topbar__logo`}>
@@ -33,19 +61,10 @@ export default class Layout extends React.Component<IProps> {
                     </div>
                 </section>
 
-                <Header
-                    photo={headerPhoto}
-                    bgImg={headerBg}
-                    text={
-                        {
-                            majorTxt: 'Consectetur aute et eiusmod',
-                            minorTxt: 'veniam ipsum duis ullamco labore nostrud pariatur adipisicin'
-                        }}
-                />
-                
-                 <Section  >
-                   asd
-                 </Section> 
+                <div id="about">asd</div>
+                <Section  >
+                    asd
+                 </Section>
 
                 <article className={`about-me`}>
                     <div className={`about-me__bg`} />
