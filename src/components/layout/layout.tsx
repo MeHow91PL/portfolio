@@ -4,32 +4,26 @@ import headerBg from '../../assets/img/header.png';
 import headerPhoto from '../../assets/img/headerPhoto.png';
 import Header from './header/header';
 import Section from './section/section';
+import Topbar from './topbar/topbar';
 
 interface IProps {
     history: object
 }
 
 export default class Layout extends React.Component<IProps> {
-    
+
     constructor(props: any) {
         super(props);
     }
 
-
     public scrollTo(anchor: string) {
         const doc: HTMLDivElement | null = document.querySelector('#' + anchor);
-        const currPos:number = window.pageYOffset;
-        console.log(window.pageYOffset);
         if (doc !== null) {
-            let count = 0;
-            const interval = 30;
-            const target = doc.offsetTop - currPos
-            setInterval(() => {
-                count += interval;
-                count >=  target?
-                    clearInterval() :
-                    window.scrollBy(0, count);
-            }, 10)
+            window.scroll({
+                behavior: 'smooth',
+                left: 0,
+                top: doc.offsetTop
+            });
         }
     }
 
@@ -49,29 +43,16 @@ export default class Layout extends React.Component<IProps> {
                             minorTxt: 'veniam ipsum duis ullamco labore nostrud pariatur adipisicin'
                         }}
                 />
-                <section className={`topbar`}>
-                    <div className="wrapper">
-                        <section className={`topbar__logo`}>
-                            LOGO
-                    </section>
-                        <nav>
-                            <ul>
-                                <li>navitem</li>
-                                <li>navitem</li>
-                                <li>navitem</li>
-                                <li>navitem</li>
-                                <li>navitem</li>
-                            </ul>
-                        </nav>
-                    </div>
-                </section>
+                <Topbar scrollFunc={scrollTo}>
+                    <Topbar.MenuItem link="#about-me" />
+                </Topbar>
 
                 <div id="about">asd</div>
                 <Section  >
                     asd
                  </Section>
 
-                <article className={`about-me`}>
+                <article className={`about-me`} id="#about-me">
                     <div className={`about-me__bg`} />
 
                     <section className={`about-me__generally`}>
