@@ -10,28 +10,33 @@ interface IProps {
 }
 
 export default class Layout extends React.Component<IProps> {
+    
     constructor(props: any) {
         super(props);
     }
 
+
     public scrollTo(anchor: string) {
         const doc: HTMLDivElement | null = document.querySelector('#' + anchor);
+        const currPos:number = window.pageYOffset;
+        console.log(window.pageYOffset);
         if (doc !== null) {
-            window.scrollTo(0,doc.offsetTop);
-
-            for (let i = 0; i < 2000; i+=50) {
-                setTimeout(() => {
-                    window.scroll(0, i);
-                }, 200);
-                
-            }
+            let count = 0;
+            const interval = 30;
+            const target = doc.offsetTop - currPos
+            setInterval(() => {
+                count += interval;
+                count >=  target?
+                    clearInterval() :
+                    window.scrollBy(0, count);
+            }, 10)
         }
     }
 
     public render() {
 
         return (
-            <div>
+            <div >
                 <div className={`page__bg`} />
 
                 <Header
