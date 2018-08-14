@@ -12,19 +12,9 @@ interface IProps {
 
 export default class Layout extends React.Component<IProps> {
 
+
     constructor(props: any) {
         super(props);
-    }
-
-    public scrollTo(anchor: string) {
-        const doc: HTMLDivElement | null = document.querySelector('#' + anchor);
-        if (doc !== null) {
-            window.scroll({
-                behavior: 'smooth',
-                left: 0,
-                top: doc.offsetTop
-            });
-        }
     }
 
     public render() {
@@ -34,7 +24,8 @@ export default class Layout extends React.Component<IProps> {
                 <div className={`page__bg`} />
 
                 <Header
-                    click={this.scrollTo}
+                    id='header'
+                    scrollTo='about'
                     photo={headerPhoto}
                     bgImg={headerBg}
                     text={
@@ -43,16 +34,28 @@ export default class Layout extends React.Component<IProps> {
                             minorTxt: 'veniam ipsum duis ullamco labore nostrud pariatur adipisicin'
                         }}
                 />
-                <Topbar scrollFunc={scrollTo}>
-                    <Topbar.MenuItem link="#about-me" />
+
+                <Topbar>
+                    <Topbar.MenuItem link="header">
+                        <>Home</>
+                    </Topbar.MenuItem>
+                    <Topbar.MenuItem link="about-me">
+                        <>O mnie</>
+                    </Topbar.MenuItem>
+                    <Topbar.MenuItem link="my-skills">
+                        <>Umiejętności</>
+                    </Topbar.MenuItem>
+                    <Topbar.MenuItem link="projects">
+                        <>Projekty</>
+                    </Topbar.MenuItem>
+                    <Topbar.MenuItem link="contact">
+                        <>Kontakt</>
+                    </Topbar.MenuItem>
                 </Topbar>
 
                 <div id="about">asd</div>
-                <Section  >
-                    asd
-                 </Section>
 
-                <article className={`about-me`} id="#about-me">
+                <article className={`about-me`} id="about-me">
                     <div className={`about-me__bg`} />
 
                     <section className={`about-me__generally`}>
@@ -65,12 +68,14 @@ export default class Layout extends React.Component<IProps> {
                         about-me__experience
                     </section>
                 </article>
-                <article className={`my-skills`}>
+                <article className={`my-skills`} id='my-skills'>
                     <div className={`my-skills__bg`} />
                     <section className={``}> skills </section>
+                    <Section />
+
                 </article>
-                <article className={`projects`}>proj</article>
-                <article className={`contact`}>cont</article>
+                <article className={`projects`} id='projects'>proj</article>
+                <article className={`contact`} id='contact'>cont</article>
                 <footer>Footer</footer>
             </div>
         )

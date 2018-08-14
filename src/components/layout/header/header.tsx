@@ -1,11 +1,13 @@
 import * as React from 'react';
+import Nav from '../../nav';
 import './header.css';
 
 
 interface IHeaderProps {
     bgImg: string,
-    click: any,
+    id?: string,
     photo: string,
+    scrollTo: string,
     text: { majorTxt: string, minorTxt: string }
 }
 
@@ -15,9 +17,9 @@ export enum HeaderLayout {
 
 // const IApp: React.SFC<IAppProps> = (props) => {
 const Header = (props: IHeaderProps) => {
-    const click = () =>props.click('about');
+    const scrollTo = () => Nav.scrollTo(props.scrollTo);
     return (
-        <header className={`header`}  >
+        <header className={`header`} id={props.id}>
             <div className={`header__bg`}
                 style={{
                     backgroundImage: `url(${props.bgImg})`
@@ -32,7 +34,7 @@ const Header = (props: IHeaderProps) => {
                     <h1>{props.text.majorTxt}</h1>
                     <h3>{props.text.minorTxt}</h3>
                 </section>
-                <a className={`header__get-more`} onClick={click}>
+                <a className={`header__get-more`} onClick={scrollTo}>
                     Poznaj mnie lepiej
                     {/* <div className={`header__get-more_arr`}>&rarr;</div> */}
                 </a>

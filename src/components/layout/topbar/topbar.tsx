@@ -3,7 +3,7 @@ import MenuItem from './manuItem';
 import './topbar.css';
 
 interface ITopbarProps {
-    scrollFunc: () => void
+    txt?: string
 }
 
 export default class Topbar extends React.Component<ITopbarProps> {
@@ -13,9 +13,9 @@ export default class Topbar extends React.Component<ITopbarProps> {
         return (
             <section className={`topbar`}>
                 <div className="wrapper">
-                    <section className={`topbar__logo`}>
+                    {/* <section className={`topbar__logo`}>
                         LOGO
-                </section>
+                </section> */}
                     <nav>
                         <ul>
                             {this.props.children}
