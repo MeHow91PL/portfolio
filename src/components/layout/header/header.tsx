@@ -8,7 +8,8 @@ interface IHeaderProps {
     id?: string,
     photo: string,
     scrollTo: string,
-    text: { majorTxt: string, minorTxt: string }
+    text: { majorTxt: string, minorTxt: string },
+    topbarHeight?:number
 }
 
 export enum HeaderLayout {
@@ -17,7 +18,7 @@ export enum HeaderLayout {
 
 // const IApp: React.SFC<IAppProps> = (props) => {
 const Header = (props: IHeaderProps) => {
-    const scrollTo = () => Nav.scrollTo(props.scrollTo);
+    const scrollTo = () => Nav.scrollTo(props.scrollTo,props.topbarHeight);
     return (
         <header className={`header`} id={props.id}>
             <div className={`header__bg`}

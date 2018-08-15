@@ -1,2 +1,26 @@
-.isvg svg {
-  width: 20%; }
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 10px; }
+  .skills .skill {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 240px 1fr;
+    justify-items: center;
+    position: relative; }
+    .skills .skill::after {
+      background: rgba(255, 160, 160, 0.8);
+      content: attr(data-more);
+      display: block;
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      transition: 1s; }
+    .skills .skill:hover::after {
+      height: 100%; }
+    .skills .skill svg {
+      height: 100%;
+      width: 100%; }
