@@ -15,7 +15,7 @@ export default class Timeline extends React.Component<ITimelineProps> {
 
     public render() {
         return (
-            <div className={`timeline`}>
+            <div className={`timeline onLeft`}>
                 <div className="timeline__line" />
                {this.props.children}
             </div>

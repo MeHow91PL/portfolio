@@ -44,16 +44,17 @@ a {
 }
 
 .topbar {
-    position: sticky;
-    top: 0;
-    left: 0;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
     display: flex;
     height: 60px;
+    left: 0;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.9);
-    align-items: center;
     &__logo {
+        background: blue;
         position: absolute;
         top: 0;
         left: 50%;
@@ -89,7 +90,6 @@ nav {
         padding: 20px;
         &__content {
             @extend .material-container;
-
             border-radius: 10px;
             overflow: hidden;
         }
@@ -101,13 +101,76 @@ nav {
             padding: 20px;
         }
     }
-        &__education{
-            padding: 5%;
-            }
+    &__education {
+        padding: 5%;
+    }
 }
 
 .my-skills,
 .projects,
 .contact {
     height: 600px;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+
+// @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px) {
+    .topbar {
+        background: red;
+        display: none;
+    }
+    .about {
+    clip-path: polygon(0 0, 100% 0%, 100% 99%, 0 100%);
+    grid-template-columns: 1fr;
+    }
+    /* Styles */
+}
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .topbar {
+        display: flex;
+    }
+    .about {
+        &__generally {
+            &__content {}
+            img {}
+            .text {}
+        }
+        &__education {}
+    }
+    /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1224px) {
+    .topbar {}
+    .about {
+        &__generally {
+            &__content {}
+            img {}
+            .text {}
+        }
+        &__education {}
+    }
+    /* Styles */
+}
+
+/* Large screens ----------- */
+
+@media only screen and (min-width: 1824px) {
+    .topbar {
+        // display: flex;
+    }
+    .about {
+        &__generally {
+            &__content {}
+            img {}
+            .text {}
+        }
+        &__education {}
+    }
+    /* Styles */
 }

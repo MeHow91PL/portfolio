@@ -28,16 +28,17 @@ a {
   background: #ffffff; }
 
 .topbar {
-  position: sticky;
-  top: 0;
-  left: 0;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
   display: flex;
   height: 60px;
+  left: 0;
+  position: sticky;
+  top: 0;
   width: 100%;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.9);
-  align-items: center; }
+  z-index: 1; }
   .topbar__logo {
+    background: blue;
     position: absolute;
     top: 0;
     left: 50%;
@@ -81,3 +82,27 @@ nav {
 .projects,
 .contact {
   height: 600px; }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-device-width: 480px) {
+  .topbar {
+    background: red;
+    display: none; }
+  .about {
+    clip-path: polygon(0 0, 100% 0%, 100% 99%, 0 100%);
+    grid-template-columns: 1fr; }
+  /* Styles */ }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .topbar {
+    display: flex; }
+  /* Styles */ }
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */ }
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */ }

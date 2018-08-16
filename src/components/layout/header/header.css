@@ -1,46 +1,3 @@
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .header__title h1 {
-    font-size: 4em; }
-  .header__title h3 {
-    font-size: 2em; }
-  .header__desc {
-    grid-row: 2/4; }
-    .header__desc__photo {
-      grid-row: 1/2; }
-    .header__desc .hr {
-      grid-row: 2/3;
-      grid-column: 1/3; }
-    .header__desc__txt {
-      display: flex;
-      grid-row: 3/4; } }
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 321px) {
-  /* Styles */ }
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 320px) {
-  /* Styles */ }
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .header__title h1 {
-    font-size: 4em; }
-  .header__title h3 {
-    font-size: 2em; }
-  .header__desc {
-    grid-row: 2/4; }
-    .header__desc__photo {
-      grid-row: 1/2; }
-    .header__desc .hr {
-      grid-row: 2/3;
-      grid-column: 1/3; }
-    .header__desc__txt {
-      display: flex;
-      grid-row: 3/4; } }
-
-/* iPads (landscape) ----------- */
 .header {
   align-items: center;
   width: 100%;
@@ -130,3 +87,18 @@
     .header__desc__txt {
       display: flex;
       grid-row: 3/4; }
+
+@media only screen and (max-device-width: 480px) {
+  .header__container {
+    grid-template-columns: 1fr; }
+  .header__title h1 {
+    font-size: 2em; }
+  .header__title h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.5em; }
+  .header__get-more {
+    grid-column: 1/2; } }
+
+/* iPads (portrait and landscape) ----------- */
+/* Desktops and laptops ----------- */
+/* Large screens ----------- */

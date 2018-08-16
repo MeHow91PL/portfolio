@@ -1,10 +1,9 @@
-.timeline {
-  align-items: center;
+.onLeft + .timeline {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 10% 1fr;
   position: relative; }
-  .timeline__text {
+  .onLeft + .timeline__text {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -12,7 +11,72 @@
     position: relative;
     text-align: center;
     width: 50%; }
-    .timeline__text .pin {
+    .onLeft + .timeline__text .pin {
+      align-items: center;
+      background: white;
+      border: 2px solid rgba(0, 0, 0, 0.7);
+      border-radius: 50%;
+      box-sizing: border-box;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      overflow: hidden;
+      padding: 5px;
+      position: relative;
+      width: 40px; }
+    .onLeft + .timeline__text .txt {
+      background: white;
+      border-radius: 10px;
+      box-sizing: border-box;
+      padding: 5px;
+      position: relative;
+      top: -5px; }
+      .onLeft + .timeline__text .txt::after {
+        background: white;
+        content: '';
+        display: block;
+        height: 30px;
+        position: relative;
+        width: 15px;
+        top: 10px; }
+    .onLeft + .timeline__text:nth-child(odd) .txt {
+      box-shadow: -1px 2px 3px -2px rgba(0, 0, 0, 0.7);
+      left: -50%;
+      margin-right: 40px;
+      width: 100%; }
+      .onLeft + .timeline__text:nth-child(odd) .txt::after {
+        clip-path: polygon(0 0, 100% 50%, 0% 100%);
+        right: -10px; }
+    .onLeft + .timeline__text:nth-child(even) .txt {
+      box-shadow: 1px 2px 3px -2px rgba(0, 0, 0, 0.7);
+      margin-left: 40px;
+      right: -50%;
+      width: 100%; }
+      .onLeft + .timeline__text:nth-child(even) .txt::after {
+        clip-path: polygon(0 50%, 100% 0, 100% 100%);
+        left: -10px; }
+  .onLeft + .timeline__line {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 2px; }
+
+.onBoth .timeline {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+  .onBoth .timeline__text {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+    text-align: center;
+    width: 50%; }
+    .onBoth .timeline__text .pin {
       align-items: center;
       background: white;
       border: 2px solid rgba(0, 0, 0, 0.7);
@@ -25,13 +89,14 @@
       padding: 5px;
       position: absolute;
       width: 40px; }
-    .timeline__text .txt {
+    .onBoth .timeline__text .txt {
       background: white;
+      border-radius: 10px;
       box-sizing: border-box;
       padding: 5px;
       position: relative;
       top: -5px; }
-      .timeline__text .txt::after {
+      .onBoth .timeline__text .txt::after {
         background: white;
         content: '';
         display: block;
@@ -39,23 +104,23 @@
         position: absolute;
         width: 15px;
         top: 10px; }
-    .timeline__text:nth-child(odd) .txt {
+    .onBoth .timeline__text:nth-child(odd) .txt {
       box-shadow: -1px 2px 3px -2px rgba(0, 0, 0, 0.7);
       left: -50%;
       margin-right: 40px;
       width: 100%; }
-      .timeline__text:nth-child(odd) .txt::after {
+      .onBoth .timeline__text:nth-child(odd) .txt::after {
         clip-path: polygon(0 0, 100% 50%, 0% 100%);
         right: -10px; }
-    .timeline__text:nth-child(even) .txt {
+    .onBoth .timeline__text:nth-child(even) .txt {
       box-shadow: 1px 2px 3px -2px rgba(0, 0, 0, 0.7);
       margin-left: 40px;
       right: -50%;
       width: 100%; }
-      .timeline__text:nth-child(even) .txt::after {
+      .onBoth .timeline__text:nth-child(even) .txt::after {
         clip-path: polygon(0 50%, 100% 0, 100% 100%);
         left: -10px; }
-  .timeline__line {
+  .onBoth .timeline__line {
     background: rgba(0, 0, 0, 0.6);
     height: 100%;
     position: absolute;

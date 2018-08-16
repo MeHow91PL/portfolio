@@ -1,9 +1,8 @@
 $txtBg: white;
-.timeline {
-    align-items: center;
+.onLeft+.timeline {
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 10% 1fr;
     position: relative;
     &__text {
         box-sizing: border-box;
@@ -16,7 +15,7 @@ $txtBg: white;
         .pin {
             align-items: center;
             background: white;
-            border: 2px solid rgba(0,0,0,.7);
+            border: 2px solid rgba(0, 0, 0, .7);
             border-radius: 50%;
             box-sizing: border-box;
             display: flex;
@@ -24,21 +23,22 @@ $txtBg: white;
             justify-content: center;
             overflow: hidden;
             padding: 5px;
-            position: absolute;
+            position: relative;
             width: 40px;
         }
         .txt {
             background: $txtBg;
+            border-radius: 10px;
             box-sizing: border-box;
             padding: 5px;
             position: relative;
-            top:-5px;
+            top: -5px;
             &::after {
                 background: $txtBg;
                 content: '';
                 display: block;
                 height: 30px;
-                position: absolute;
+                position: relative;
                 width: 15px;
                 top: 10px;
             }
@@ -76,6 +76,89 @@ $txtBg: white;
         width: 2px;
     }
 }
+
+.onBoth {
+    .timeline {
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        &__text {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            position: relative;
+            text-align: center;
+            width: 50%;
+            .pin {
+                align-items: center;
+                background: white;
+                border: 2px solid rgba(0, 0, 0, .7);
+                border-radius: 50%;
+                box-sizing: border-box;
+                display: flex;
+                height: 40px;
+                justify-content: center;
+                overflow: hidden;
+                padding: 5px;
+                position: absolute;
+                width: 40px;
+            }
+            .txt {
+                background: $txtBg;
+                border-radius: 10px;
+                box-sizing: border-box;
+                padding: 5px;
+                position: relative;
+                top: -5px;
+                &::after {
+                    background: $txtBg;
+                    content: '';
+                    display: block;
+                    height: 30px;
+                    position: absolute;
+                    width: 15px;
+                    top: 10px;
+                }
+            }
+            &:nth-child(odd) {
+                .txt {
+                    box-shadow: -1px 2px 3px -2px rgba(0, 0, 0, .7);
+                    left: -50%;
+                    margin-right: 40px;
+                    width: 100%;
+                    &::after {
+                        clip-path: polygon(0 0, 100% 50%, 0% 100%); // box-shadow: 1px 1px 10px black;
+                        right: -10px;
+                    }
+                }
+            }
+            &:nth-child(even) {
+                .txt {
+                    box-shadow: 1px 2px 3px -2px rgba(0, 0, 0, .7);
+                    margin-left: 40px;
+                    right: -50%;
+                    width: 100%;
+                    &::after {
+                        clip-path: polygon(0 50%, 100% 0, 100% 100%); // box-shadow: 1px 1px 10px black;
+                        left: -10px;
+                    }
+                }
+            }
+        }
+        &__line {
+            background: rgba(0, 0, 0, .6);
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 2px;
+        }
+    }
+}
+
+.onRight {}
 
 //     .timeline {
 //     align-content: center;
