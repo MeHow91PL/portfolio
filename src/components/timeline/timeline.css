@@ -1,82 +1,50 @@
-.onLeft + .timeline {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 10% 1fr;
-  position: relative; }
-  .onLeft + .timeline__text {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    position: relative;
-    text-align: center;
-    width: 50%; }
-    .onLeft + .timeline__text .pin {
-      align-items: center;
-      background: white;
-      border: 2px solid rgba(0, 0, 0, 0.7);
-      border-radius: 50%;
-      box-sizing: border-box;
-      display: flex;
-      height: 40px;
-      justify-content: center;
-      overflow: hidden;
-      padding: 5px;
-      position: relative;
-      width: 40px; }
-    .onLeft + .timeline__text .txt {
-      background: white;
-      border-radius: 10px;
-      box-sizing: border-box;
-      padding: 5px;
-      position: relative;
-      top: -5px; }
-      .onLeft + .timeline__text .txt::after {
-        background: white;
-        content: '';
-        display: block;
-        height: 30px;
-        position: relative;
-        width: 15px;
-        top: 10px; }
-    .onLeft + .timeline__text:nth-child(odd) .txt {
-      box-shadow: -1px 2px 3px -2px rgba(0, 0, 0, 0.7);
-      left: -50%;
-      margin-right: 40px;
-      width: 100%; }
-      .onLeft + .timeline__text:nth-child(odd) .txt::after {
-        clip-path: polygon(0 0, 100% 50%, 0% 100%);
-        right: -10px; }
-    .onLeft + .timeline__text:nth-child(even) .txt {
-      box-shadow: 1px 2px 3px -2px rgba(0, 0, 0, 0.7);
-      margin-left: 40px;
-      right: -50%;
-      width: 100%; }
-      .onLeft + .timeline__text:nth-child(even) .txt::after {
-        clip-path: polygon(0 50%, 100% 0, 100% 100%);
-        left: -10px; }
-  .onLeft + .timeline__line {
-    background: rgba(0, 0, 0, 0.6);
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 2px; }
-
-.onBoth .timeline {
-  align-items: center;
+.timeline {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   position: relative; }
-  .onBoth .timeline__text {
+  .timeline + .onLeft {
+    align-items: flex-start; }
+    .timeline + .onLeft__text {
+      justify-content: flex-start;
+      width: 50%; }
+      .timeline + .onLeft__text .pin {
+        background: red;
+        position: relative; }
+      .timeline + .onLeft__text .txt {
+        position: relative; }
+        .timeline + .onLeft__text .txt::after {
+          margin-left: 40px; }
+  .timeline + .onBoth {
+    align-items: center; }
+    .timeline + .onBoth__text {
+      width: 50%;
+      justify-content: center; }
+      .timeline + .onBoth__text:nth-child(odd) .txt {
+        box-shadow: -1px 2px 3px -2px rgba(0, 0, 0, 0.7);
+        left: -50%;
+        margin-right: 40px;
+        width: 100%; }
+        .timeline + .onBoth__text:nth-child(odd) .txt::after {
+          clip-path: polygon(0 0, 100% 50%, 0% 100%);
+          right: -10px; }
+      .timeline + .onBoth__text:nth-child(even) .txt {
+        box-shadow: 1px 2px 3px -2px rgba(0, 0, 0, 0.7);
+        margin-left: 40px;
+        right: -50%;
+        width: 100%; }
+        .timeline + .onBoth__text:nth-child(even) .txt::after {
+          clip-path: polygon(0 50%, 100% 0, 100% 100%);
+          left: -10px; }
+  .timeline + .onLeft {
+    align-items: flex-end; }
+  .timeline__text {
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
     margin: 20px 0;
     position: relative;
-    text-align: center;
-    width: 50%; }
-    .onBoth .timeline__text .pin {
+    text-align: center; }
+    .timeline__text .pin {
       align-items: center;
       background: white;
       border: 2px solid rgba(0, 0, 0, 0.7);
@@ -89,14 +57,14 @@
       padding: 5px;
       position: absolute;
       width: 40px; }
-    .onBoth .timeline__text .txt {
+    .timeline__text .txt {
       background: white;
       border-radius: 10px;
       box-sizing: border-box;
       padding: 5px;
       position: relative;
       top: -5px; }
-      .onBoth .timeline__text .txt::after {
+      .timeline__text .txt::after {
         background: white;
         content: '';
         display: block;
@@ -104,23 +72,7 @@
         position: absolute;
         width: 15px;
         top: 10px; }
-    .onBoth .timeline__text:nth-child(odd) .txt {
-      box-shadow: -1px 2px 3px -2px rgba(0, 0, 0, 0.7);
-      left: -50%;
-      margin-right: 40px;
-      width: 100%; }
-      .onBoth .timeline__text:nth-child(odd) .txt::after {
-        clip-path: polygon(0 0, 100% 50%, 0% 100%);
-        right: -10px; }
-    .onBoth .timeline__text:nth-child(even) .txt {
-      box-shadow: 1px 2px 3px -2px rgba(0, 0, 0, 0.7);
-      margin-left: 40px;
-      right: -50%;
-      width: 100%; }
-      .onBoth .timeline__text:nth-child(even) .txt::after {
-        clip-path: polygon(0 50%, 100% 0, 100% 100%);
-        left: -10px; }
-  .onBoth .timeline__line {
+  .timeline__line {
     background: rgba(0, 0, 0, 0.6);
     height: 100%;
     position: absolute;
