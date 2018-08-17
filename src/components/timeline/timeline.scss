@@ -1,32 +1,56 @@
 $txtBg: white;
 .timeline {
-    & +.onLeft {
+    .onLeft & {
         align-items: flex-start;
         &__text {
             justify-content: flex-start;
-            width: 50%;
+            height: 100%;
             .pin {
-                background: red;
+                height: 40px;
+                left: -10px;
                 position: relative;
+                width: 40px;
             }
             .txt {
+                margin: 0 5px;
                 position: relative;
                 &::after {
-                    margin-left: 40px;
+                    clip-path: polygon(0 50%, 100% 0, 100% 100%); // box-shadow: 1px 1px 10px black;
+                    left: -10px;
                 }
             }
         }
+        &__line {
+            position: absolute;
+            left: 10px;
+            top: 0;
+            width: 2px;
+        }
     }
-    &+.onBoth {
+    .onBoth & {
         align-items: center;
         &__text {
-            width: 50%;
-            justify-content: center;
-            &:nth-child(odd) {
+            position: relative;
+            width: 100%;
+            top: 0;
+            &:nth-child(2) {
+                padding-top: 15px;
+            }
+            &:last-child {
+                padding-bottom: 15px;
+            }
+            .pin {
+                position: relative;
+                margin: 4px 0;
+            }
+            .txt {
+                position: absolute;
+                width: 50%;
+            }
+            &:nth-child(even) {
                 .txt {
                     box-shadow: -1px 2px 3px -2px rgba(0, 0, 0, .7);
-                    left: -50%;
-                    margin-right: 40px;
+                    margin-right: calc(40px + 50%);
                     width: 100%;
                     &::after {
                         clip-path: polygon(0 0, 100% 50%, 0% 100%); // box-shadow: 1px 1px 10px black;
@@ -34,11 +58,10 @@ $txtBg: white;
                     }
                 }
             }
-            &:nth-child(even) {
+            &:nth-child(odd) {
                 .txt {
                     box-shadow: 1px 2px 3px -2px rgba(0, 0, 0, .7);
-                    margin-left: 40px;
-                    right: -50%;
+                    margin-left: calc(40px + 50%);
                     width: 100%;
                     &::after {
                         clip-path: polygon(0 50%, 100% 0, 100% 100%); // box-shadow: 1px 1px 10px black;
@@ -48,17 +71,15 @@ $txtBg: white;
             }
         }
     }
-    &+.onLeft {
-        align-items: flex-end;
-    }
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    height: 100%;
     position: relative;
     &__text {
+        justify-content: center;
         box-sizing: border-box;
         display: flex;
-        margin: 20px 0;
         position: relative;
         text-align: center;
         .pin {
@@ -67,41 +88,39 @@ $txtBg: white;
             border: 2px solid rgba(0, 0, 0, .7);
             border-radius: 50%;
             box-sizing: border-box;
+            cursor: pointer;
             display: flex;
             height: 40px;
             justify-content: center;
-            overflow: hidden;
             padding: 5px;
-            position: absolute;
             width: 40px;
         }
         .txt {
             background: $txtBg;
             border-radius: 10px;
             box-sizing: border-box;
+            max-width: 45%;
             padding: 5px;
-            position: relative;
-            top: -5px;
+            word-wrap: break-word;
             &::after {
                 background: $txtBg;
                 content: '';
                 display: block;
-                height: 30px;
+                height: 25px;
                 position: absolute;
+                top: 7%;
                 width: 15px;
-                top: 10px;
             }
         }
     }
     &__line {
-        background: rgba(0, 0, 0, .6);
+        align-self: center;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, .8) 90%, rgba(0, 0, 0, 0) 100%);
         height: 100%;
         position: absolute;
         top: 0;
         width: 2px;
     }
-
-    
 }
 
 //     .timeline {

@@ -74,16 +74,22 @@ export default class Layout extends React.Component<IProps> {
                     <section className={`about__education`}>
                         <Timeline>
                             <Timeline.TimelineItem 
-                            pin={`2001`}                            
-                            desc={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deserunt sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
+                            pin={`1`}                            
+                            desc={`Lorem ipsum doldipisicing elit. Provident deserunt sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
                             />
                             <Timeline.TimelineItem 
-                            pin={`2005`}                            
-                            desc={`Loisicing elit. Provident deserunt sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
+                            pin={`2`}                            
+                            desc={`Loisicinasdhuasht sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
                             />
                             <Timeline.TimelineItem 
-                            pin={`2009`}                            
-                            desc={`Lorem ipsum dolor sit amet consectetur adipisorem ipsum dolor sit amet consectetur adipisorem ipsum dolor sit amet consectetur adipisicing elit. Provident deserunt sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
+                            pin={`3`}                            
+                            desc={`Lorem ipsum dolor sit amet amet consectetur adipisicing elit. Provident deserunt sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
+                            />
+                            <Timeline.TimelineItem pin={`4`} desc={`fsdfasdasddddddddddddddddddddddddddddddddddddddoiweiowghw`} />
+                            <Timeline.TimelineItem pin={`5`} desc={`fsdfasdasdddddd dddddddddddddddd ddddddddd dddddddoiweiowghw`} />
+                            <Timeline.TimelineItem 
+                            pin={`6`}                            
+                            desc={`Lorem ipsasdiditate excepturi reprehenderit asdic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
                             />
                         </Timeline>
                     </section>
