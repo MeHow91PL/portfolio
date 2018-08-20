@@ -30,6 +30,7 @@ $txtBg: white;
     .onBoth & {
         align-items: center;
         &__text {
+            left:0;
             position: relative;
             width: 100%;
             top: 0;
@@ -41,9 +42,10 @@ $txtBg: white;
             }
             .pin {
                 position: relative;
-                margin: 4px 0;
+                // margin: 4px 0;
             }
             .txt {
+                left:0;
                 position: absolute;
                 width: 50%;
             }
@@ -78,7 +80,6 @@ $txtBg: white;
     position: relative;
     &__text {
         justify-content: center;
-        box-sizing: border-box;
         display: flex;
         position: relative;
         text-align: center;
@@ -92,6 +93,7 @@ $txtBg: white;
             display: flex;
             height: 40px;
             justify-content: center;
+            margin-bottom: 5px;
             padding: 5px;
             width: 40px;
         }
@@ -108,7 +110,7 @@ $txtBg: white;
                 display: block;
                 height: 25px;
                 position: absolute;
-                top: 7%;
+                top: 0;
                 width: 15px;
             }
         }

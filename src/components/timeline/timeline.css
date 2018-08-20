@@ -28,6 +28,7 @@
   .onBoth .timeline {
     align-items: center; }
     .onBoth .timeline__text {
+      left: 0;
       position: relative;
       width: 100%;
       top: 0; }
@@ -36,9 +37,9 @@
       .onBoth .timeline__text:last-child {
         padding-bottom: 15px; }
       .onBoth .timeline__text .pin {
-        position: relative;
-        margin: 4px 0; }
+        position: relative; }
       .onBoth .timeline__text .txt {
+        left: 0;
         position: absolute;
         width: 50%; }
       .onBoth .timeline__text:nth-child(even) .txt {
@@ -57,7 +58,6 @@
           left: -10px; }
   .timeline__text {
     justify-content: center;
-    box-sizing: border-box;
     display: flex;
     position: relative;
     text-align: center; }
@@ -71,6 +71,7 @@
       display: flex;
       height: 40px;
       justify-content: center;
+      margin-bottom: 5px;
       padding: 5px;
       width: 40px; }
     .timeline__text .txt {
@@ -86,7 +87,7 @@
         display: block;
         height: 25px;
         position: absolute;
-        top: 7%;
+        top: 0;
         width: 15px; }
   .timeline__line {
     align-self: center;

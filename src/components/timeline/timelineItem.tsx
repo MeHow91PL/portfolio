@@ -11,25 +11,25 @@ interface ITimelineProps {
 
 class TimelineItem extends React.Component<ITimelineProps>
 {
-    // const getSize = (item:{id: number, test: string}) => {
-    //     if (props.getSize !== undefined) {
-    //         props.getSize({
-    //             id: item.id,
-    //             test: item.test
-    //         })
-    //     }
-
-    // }
     public node: any;
-
     public componentDidMount() {
-        
         if (this.props.getSize !== undefined &&  this.props.id !== undefined) {
             this.props.getSize({
                 height: this.node.clientHeight,
                 id: this.props.id
             })
         }
+    }
+    public componentDidUpdate(prevProps:ITimelineProps, prevState:any, snapshot:any){
+        // if (prevProps !== this.props) {
+            
+        //     if (this.props.getSize !== undefined &&  this.props.id !== undefined) {
+        //         this.props.getSize({
+        //             height: this.node.clientHeight,
+        //             id: this.props.id
+        //         })
+        //     }
+        // }
     }
 
     public render() {

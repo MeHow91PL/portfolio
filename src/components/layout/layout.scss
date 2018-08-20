@@ -60,6 +60,9 @@ a {
         left: 50%;
         width: 100px;
     }
+    @media (min-device-width: 320px) and (max-device-width: 480px) {
+        display: none;
+    }
 }
 
 nav {
@@ -80,6 +83,11 @@ nav {
 }
 
 .about {
+    @media (min-device-width: 320px) and (max-device-width: 480px) {
+        background: red !important;
+        clip-path: polygon(0 0, 100% 0%, 100% 99%, 0 100%);
+        grid-template-columns: 1fr;
+    }
     background: #f2f2f2;
     clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 100%);
     display: grid;
@@ -110,67 +118,4 @@ nav {
 .projects,
 .contact {
     height: 600px;
-}
-
-/* Smartphones (portrait and landscape) ----------- */
-
-// @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-@media only screen and (max-device-width: 480px) {
-    .topbar {
-        background: red;
-        display: none;
-    }
-    .about {
-    clip-path: polygon(0 0, 100% 0%, 100% 99%, 0 100%);
-    grid-template-columns: 1fr;
-    }
-    /* Styles */
-}
-/* iPads (portrait and landscape) ----------- */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .topbar {
-        display: flex;
-    }
-    .about {
-        &__generally {
-            &__content {}
-            img {}
-            .text {}
-        }
-        &__education {}
-    }
-    /* Styles */
-}
-
-/* Desktops and laptops ----------- */
-
-@media only screen and (min-width: 1224px) {
-    .topbar {}
-    .about {
-        &__generally {
-            &__content {}
-            img {}
-            .text {}
-        }
-        &__education {}
-    }
-    /* Styles */
-}
-
-/* Large screens ----------- */
-
-@media only screen and (min-width: 1824px) {
-    .topbar {
-        // display: flex;
-    }
-    .about {
-        &__generally {
-            &__content {}
-            img {}
-            .text {}
-        }
-        &__education {}
-    }
-    /* Styles */
 }

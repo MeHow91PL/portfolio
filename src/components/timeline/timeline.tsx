@@ -18,7 +18,7 @@ export default class Timeline extends React.Component<ITimelineProps, ITimelineS
     private pos = 0;
     private leftSideLastItemHeight = 0;
     private rightSideLastItemHeight = 0;
-    private pinHeight = 30;
+    private pinHeight = 40;
 
     constructor(props: ITimelineProps) {
         super(props);
@@ -32,6 +32,9 @@ export default class Timeline extends React.Component<ITimelineProps, ITimelineS
 
     public componentDidMount() {
         window.addEventListener('resize', this.onWindowResizeHandler);
+        window.addEventListener('click', (e)=>{
+            console.log(e.target)
+        });
         this.setTimelineMode(document.body.clientWidth);
 
     }
@@ -52,10 +55,15 @@ export default class Timeline extends React.Component<ITimelineProps, ITimelineS
                         if (this.state.items.length > 0) {
                             if (i % 2 === 0) {
                                 this.pos = this.leftSideLastItemHeight;
+                                
                                 // pozycja dymku powinna być przesunięta o wysokość poprzedniego elementu
                                 // po tej samej stronie - wysykość 2 pinów przed nim - margines
                                 this.leftSideLastItemHeight = this.state.items[i].height - (2 * this.pinHeight);
+                                // console.log('this.state.items['+i+'].height', this.state.items[i].height);
+                                // console.log('this.leftSideLastItemHeight', this.leftSideLastItemHeight);
+                                // console.log('2 * this.pinHeight', 2 * this.pinHeight);
                                 this.leftSideLastItemHeight -= Math.min(this.leftSideLastItemHeight, this.rightSideLastItemHeight);
+                                // console.log('Math.min(this.leftSideLastItemHeight, this.rightSideLastItemHeight)', Math.min(this.leftSideLastItemHeight, this.rightSideLastItemHeight));
                             }
                             else {
                                 this.pos = this.rightSideLastItemHeight;
@@ -74,13 +82,6 @@ export default class Timeline extends React.Component<ITimelineProps, ITimelineS
         )
     }
     protected getInfoSize = (item: { height: number, id: number }) => {
-        //     const newItems = this.state.items.slice();
-        //     newItems.push(item);
-
-        //     this.setState({
-        //         items: newItems
-        //     })
-        // }
         this.state.items.push(item);
     }
 
