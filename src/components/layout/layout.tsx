@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import headerBg from '../../assets/img/header.png';
-import headerPhoto from '../../assets/img/headerPhoto.png';
+import headerPhoto from '../../assets/img/me.png';
 import Timeline from '../timeline/timeline';
 import Topbar from '../topbar/topbar';
 import Header from './header/header';
@@ -57,39 +57,34 @@ export default class Layout extends React.Component<IProps> {
                     </Topbar.MenuItem>
                 </Topbar>
 
-
-
-
                 <article className={`about`} id="about">
                     <section className={`about__generally`}>
-                        {/* <div className={'material-container'}> */}
-                        <div className="about__generally__content">
-                            <img src={headerPhoto} alt="" />
-                            <div className="text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fuga, laudantium ratione officiis quas quasi nisi quia saepe enim, illum accusamus a labore placeat itaque porro voluptas dignissimos ut reprehenderit sed, explicabo aliquid. Quidem, sint aperiam et saepe suscipit cumque. Obcaecati natus placeat voluptates molestiae ea fugiat perferendis. Odio, voluptatibus!
-                                </div>
-                            {/* </div> */}
+                        <div className={`about__generally--text`}>
+                            <h3>O mnie</h3>
+                            <p>Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolorem ipsum unde numquam illum saepe libero? Tempore earum veritatis quod! ipsum dolor sit amet consectetur adipisicing elit. Animi fuga, laudantium ratione officiis quas quasi nisi quia saepe enim, illum accusamus a labore placeat itaque porro voluptas dignissimos ut reprehenderit sed, explicabo aliquid. Quidem, sint aperiam et saepe suscipit cumque. Obcaecati natus placeat voluptates molestiae ea fugiat perferendis. Odio, voluptatibus!</p>
                         </div>
+                        <img src={headerPhoto} alt="" />
                     </section>
+
                     <section className={`about__education`}>
                         <Timeline>
-                            <Timeline.TimelineItem 
-                            pin={`1`}                            
-                            desc={`Lorem ipsum doldipisicing elit. Provident deserunt sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
+                            <Timeline.TimelineItem
+                                pin={`1`}
+                                desc={`Lorem ipsum doldipisicing elit. Provident deserunt sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
                             />
-                            <Timeline.TimelineItem 
-                            pin={`2`}                            
-                            desc={`Loisicinasdhuasht sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
+                            <Timeline.TimelineItem
+                                pin={`2`}
+                                desc={`Loisicinasdhuasht sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
                             />
-                            <Timeline.TimelineItem 
-                            pin={`3`}                            
-                            desc={`Lorem ipsum dolor sit amet amet consectetur adipisicing elit. Provident deserunt sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
+                            <Timeline.TimelineItem
+                                pin={`3`}
+                                desc={`Lorem ipsum dolor sit amet amet consectetur adipisicing elit. Provident deserunt sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
                             />
                             <Timeline.TimelineItem pin={`4`} desc={`fsdfasdasddddddddddddddddddddddddddddddddddddddoiweiowghw`} />
                             <Timeline.TimelineItem pin={`5`} desc={`fsdfasdasdddddd dddddddddddddddd ddddddddd dddddddoiweiowghw`} />
-                            <Timeline.TimelineItem 
-                            pin={`6`}                            
-                            desc={`Lorem ipsasdiditate excepturi reprehenderit asdic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
+                            <Timeline.TimelineItem
+                                pin={`6`}
+                                desc={`Lorem ipsasdiditate excepturi reprehenderit asdic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
                             />
                         </Timeline>
                     </section>
