@@ -24,20 +24,19 @@ interface ISectionProps {
     children?: any
 }
 
+interface ISectionState {
+    txt?:string
+}
+
 // export enum HeaderLayout {
 //     photoRight, photoLeft
 // }
-
-class Section extends React.Component<ISectionProps>{
+class Section extends React.Component<ISectionProps, ISectionState>{
     public static Background = Background;
     private skills: any;
     constructor(props: ISectionProps) {
         super(props);
     }
-
-
-
-
     public componentDidMount() {
         this.skills = document.querySelectorAll('.skill');
         _.map(this.skills,
@@ -46,7 +45,6 @@ class Section extends React.Component<ISectionProps>{
             }
         )
     }
-
     public componentWillUnmount() {
         _.map(this.skills,
             (skill: any) => {
@@ -54,7 +52,6 @@ class Section extends React.Component<ISectionProps>{
             }
         )
     }
-
     public render() {
         return (
             <>
@@ -102,7 +99,6 @@ class Section extends React.Component<ISectionProps>{
     }
     private mouseEneterHandler = () => {
         console.log('enter');
-
     }
 };
 

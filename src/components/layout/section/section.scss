@@ -10,16 +10,7 @@
         grid-template-rows: 240px 1fr;
         justify-items: center;
         position: relative;
-        &::after {
-            background: rgba(255, 160, 160, 0.8);
-            content: attr(data-more);
-            display: block;
-            height: 0;
-            overflow: hidden;
-            position: absolute;
-            width: 100%;
-            transition: 1s;
-        }
+        
         &:hover {
             &::after {
                 height: 100%;
@@ -30,4 +21,30 @@
             width: 100%;
         }
     }
+}
+
+.right{
+    animation: test 500ms 1;
+        @keyframes test {
+            from{
+
+            }
+            to{
+
+            }
+        }
+}
+
+
+.left{
+    background: red;
+    width: 100%;
+    height: 100%;
+    animation: test2 500ms 1;
+        @keyframes test2 {
+            from{
+            }
+            to{
+            }
+        }
 }

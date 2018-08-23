@@ -1,3 +1,4 @@
+import AOS from 'aos';
 import * as React from 'react';
 
 import headerBg from '../../assets/img/header.png';
@@ -8,6 +9,7 @@ import Header from './header/header';
 import SkillsSection from './section/skillsSection';
 
 import './layout.css';
+import '/node_modules/aos/dist/aos.css';
 
 interface IProps {
     history: object
@@ -18,6 +20,7 @@ export default class Layout extends React.Component<IProps> {
 
     constructor(props: any) {
         super(props);
+        AOS.init();
     }
 
     public render() {
@@ -58,14 +61,6 @@ export default class Layout extends React.Component<IProps> {
                 </Topbar>
 
                 <article className={`about`} id="about">
-                    <section className={`about__generally`}>
-                        <div className={`about__generally--text`}>
-                            <h3>O mnie</h3>
-                            <p>Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolorem ipsum unde numquam illum saepe libero? Tempore earum veritatis quod! ipsum dolor sit amet consectetur adipisicing elit. Animi fuga, laudantium ratione officiis quas quasi nisi quia saepe enim, illum accusamus a labore placeat itaque porro voluptas dignissimos ut reprehenderit sed, explicabo aliquid. Quidem, sint aperiam et saepe suscipit cumque. Obcaecati natus placeat voluptates molestiae ea fugiat perferendis. Odio, voluptatibus!</p>
-                        </div>
-                        <img src={headerPhoto} alt="" />
-                    </section>
-
                     <section className={`about__education`}>
                         <Timeline>
                             <Timeline.TimelineItem
@@ -92,6 +87,14 @@ export default class Layout extends React.Component<IProps> {
                     <section className={`about__experience`}>
                         about__experience
                     </section>
+                      <section className={`about__generally`}>
+                        <div className={`about__generally--text`}>
+                            <h3 data-aos="fade-right" data-aos-once="true">O mnie</h3>
+                            <p data-aos="fade-right" data-aos-delay="150" data-aos-once="true">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolorem ipsum unde numquam illum saepe libero? Tempore earum veritatis quod! ipsum dolor sit amet consectetur adipisicing elit. Animi fuga, laudantium ratione officiis quas quasi nisi quia saepe enim, illum accusamus a labore placeat itaque porro voluptas dignissimos ut reprehenderit sed, explicabo aliquid. Quidem, sint aperiam et saepe suscipit cumque. Obcaecati natus placeat voluptates molestiae ea fugiat perferendis. Odio, voluptatibus!</p>
+                        </div>
+                        <img src={headerPhoto} alt="" />
+                    </section>
+
                 </article>
                 <article className={`my-skills`} id='my-skills'>
                     <div className={`my-skills__bg`} />
