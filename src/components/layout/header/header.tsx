@@ -33,7 +33,7 @@ const Header = (props: IHeaderProps) => {
             >
                 <section className={`header__title`}>
                     <h1>{props.text.majorTxt}</h1>
-                    <h3>{props.text.minorTxt}</h3>
+                    <h2>{props.text.minorTxt}</h2>
                 </section>
                 <a className={`header__get-more`} onClick={scrollTo}>
                     Poznaj mnie lepiej

@@ -34,7 +34,7 @@
     width: 80%; }
     .header__title h1 {
       font-size: 3em; }
-    .header__title h3 {
+    .header__title h2 {
       color: rgba(255, 255, 255, 0.9);
       font-size: 2em; }
     .header__title .distinct {
@@ -93,7 +93,7 @@
     grid-template-columns: 1fr; }
   .header__title h1 {
     font-size: 2em; }
-  .header__title h3 {
+  .header__title h2 {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.5em; }
   .header__get-more {

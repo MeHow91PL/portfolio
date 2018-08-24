@@ -15,7 +15,7 @@ export default class Topbar extends React.Component<ITopbarProps> {
     public render() {
         return (
             <TopbarContext.Provider value={this.props.height}>
-                <section className={`topbar`} style={{
+                <div className={`topbar`} style={{
                     height: this.props.height
                 }}>
                     <div className="wrapper">
@@ -28,7 +28,7 @@ export default class Topbar extends React.Component<ITopbarProps> {
                             </ul>
                         </nav>
                     </div>
-                </section>
+                </div>
             </TopbarContext.Provider>
         )
     }

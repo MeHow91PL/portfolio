@@ -31,16 +31,12 @@ export default class Timeline extends React.Component<ITimelineProps, ITimelineS
 
 
     public componentDidMount() {
-        window.addEventListener('resize', this.onWindowResizeHandler);
-        window.addEventListener('click', (e)=>{
-            console.log(e.target)
-        });
+        document.addEventListener('resize', this.onWindowResizeHandler);
         this.setTimelineMode(document.body.clientWidth);
-
     }
 
     public componentWillUnmount() {
-        window.removeEventListener('resize', this.onWindowResizeHandler);
+        document.removeEventListener('resize', this.onWindowResizeHandler);
     }
 
     public render() {

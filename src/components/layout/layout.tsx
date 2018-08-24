@@ -60,8 +60,9 @@ export default class Layout extends React.Component<IProps> {
                     </Topbar.MenuItem>
                 </Topbar>
 
-                <article className={`about`} id="about">
+                <div className={`about`} id="about">
                     <section className={`about__education`}>
+                        <h3>Wykształcenie</h3>
                         <Timeline>
                             <Timeline.TimelineItem
                                 pin={`1`}
@@ -85,9 +86,10 @@ export default class Layout extends React.Component<IProps> {
                     </section>
 
                     <section className={`about__experience`}>
+                        <h3>Doświadczenie</h3>
                         about__experience
                     </section>
-                      <section className={`about__generally`}>
+                    <section className={`about__generally`}>
                         <div className={`about__generally--text`}>
                             <h3 data-aos="fade-right" data-aos-once="true">O mnie</h3>
                             <p data-aos="fade-right" data-aos-delay="150" data-aos-once="true">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolorem ipsum unde numquam illum saepe libero? Tempore earum veritatis quod! ipsum dolor sit amet consectetur adipisicing elit. Animi fuga, laudantium ratione officiis quas quasi nisi quia saepe enim, illum accusamus a labore placeat itaque porro voluptas dignissimos ut reprehenderit sed, explicabo aliquid. Quidem, sint aperiam et saepe suscipit cumque. Obcaecati natus placeat voluptates molestiae ea fugiat perferendis. Odio, voluptatibus!</p>
@@ -95,16 +97,25 @@ export default class Layout extends React.Component<IProps> {
                         <img src={headerPhoto} alt="" />
                     </section>
 
-                </article>
-                <article className={`my-skills`} id='my-skills'>
+                </div>
+                <section className={`my-skills`} id='my-skills'>
+                    <h3>Umiejętności</h3>
                     <div className={`my-skills__bg`} />
-                    <section className={``}> skills </section>
+                    <div className={``}> skills </div>
                     <SkillsSection />
 
-                </article>
-                <article className={`projects`} id='projects'>proj</article>
-                <article className={`contact`} id='contact'>cont</article>
-                <footer>Footer</footer>
+                </section>
+                <section className={`projects`} id='projects'>
+                    <h3>Projekty</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi deleniti ipsam reiciendis. Quaerat sit nesciunt cum, doloremque praesentium non eaque, repellendus pariatur illo dicta recusandae laboriosam voluptate officia. Odit nihil recusandae ea distinctio. Eos reprehenderit ipsa quas ullam omnis exercitationem, asperiores officiis nam officia cum laboriosam vero accusantium architecto sequi, velit eius excepturi aperiam magnam dignissimos ad ut. Porro illo perferendis recusandae, corporis, necessitatibus modi cupiditate nobis quae eius eos, voluptate commodi? Qui natus molestiae vitae eum harum quasi quaerat, sapiente nisi, vero delectus sint nesciunt esse facilis? Minima culpa consequatur distinctio accusantium magni perspiciatis mollitia quidem maxime atque ipsam.</p>
+                </section>
+                <section className={`contact`} id='contact'>
+                    <h3>Kontakt</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi deleniti ipsam reiciendis. Quaerat sit nesciunt cum, doloremque praesentium non eaque, repellendus pariatur illo dicta recusandae laboriosam voluptate officia. Odit nihil recusandae ea distinctio. Eos reprehenderit ipsa quas ullam omnis exercitationem, asperiores officiis nam officia cum laboriosam vero accusantium architecto sequi, velit eius excepturi aperiam magnam dignissimos ad ut. Porro illo perferendis recusandae, corporis, necessitatibus modi cupiditate nobis quae eius eos, voluptate commodi? Qui natus molestiae vitae eum harum quasi quaerat, sapiente nisi, vero delectus sint nesciunt esse facilis? Minima culpa consequatur distinctio accusantium magni perspiciatis mollitia quidem maxime atque ipsam.</p>
+                </section>
+                <footer>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi deleniti ipsam reiciendis. Quaerat sit nesciunt cum, doloremque praesentium non eaque, repellendus pariatur illo dicta recusandae laboriosam voluptate officia. Odit nihil recusandae ea distinctio. Eos reprehenderit ipsa quas ullam omnis exercitationem, asperiores officiis nam officia cum laboriosam vero accusantium architecto sequi, velit eius excepturi aperiam magnam dignissimos ad ut. Porro illo perferendis recusandae, corporis, necessitatibus modi cupiditate nobis quae eius eos, voluptate commodi? Qui natus molestiae vitae eum harum quasi quaerat, sapiente nisi, vero delectus sint nesciunt esse facilis? Minima culpa consequatur distinctio accusantium magni perspiciatis mollitia quidem maxime atque ipsam.</p>
+                </footer>
             </div>
         )
     }
