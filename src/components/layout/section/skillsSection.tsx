@@ -12,6 +12,7 @@ import sass from '../../../assets/img/sass.svg';
 import Skill from './amazingItem';
 import Background from './background';
 
+import './amazingItem.css'
 import './section.css'
 
 interface ISectionProps {
