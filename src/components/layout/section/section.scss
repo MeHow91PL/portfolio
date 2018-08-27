@@ -9,14 +9,15 @@
         display: grid;
         grid-template-rows: 240px 1fr;
         position: relative;
-        &:hover {
-            &::after {
-                height: 100%;
+        .info{
+            background: green;
+            height: 100%;
             }
-        }
         svg {
             height: 100%;
             width: 100%;
         }
+            
     }
+    
 }

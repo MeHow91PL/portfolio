@@ -55,9 +55,6 @@ export default class Timeline extends React.Component<ITimelineProps, ITimelineS
                                 // pozycja dymku powinna być przesunięta o wysokość poprzedniego elementu
                                 // po tej samej stronie - wysykość 2 pinów przed nim - margines
                                 this.leftSideLastItemHeight = this.state.items[i].height - (2 * this.pinHeight);
-                                // console.log('this.state.items['+i+'].height', this.state.items[i].height);
-                                // console.log('this.leftSideLastItemHeight', this.leftSideLastItemHeight);
-                                // console.log('2 * this.pinHeight', 2 * this.pinHeight);
                                 this.leftSideLastItemHeight -= Math.min(this.leftSideLastItemHeight, this.rightSideLastItemHeight);
                                 // console.log('Math.min(this.leftSideLastItemHeight, this.rightSideLastItemHeight)', Math.min(this.leftSideLastItemHeight, this.rightSideLastItemHeight));
                             }

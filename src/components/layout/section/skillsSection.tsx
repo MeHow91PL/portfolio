@@ -9,8 +9,8 @@ import js from '../../../assets/img/js.svg';
 import react from '../../../assets/img/react.svg';
 import rwd from '../../../assets/img/rwd.svg';
 import sass from '../../../assets/img/sass.svg';
-import Skill from './amazingItem';
 import Background from './background';
+import Skill from './skill';
 
 import './amazingItem.css'
 import './section.css'

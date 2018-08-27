@@ -4,76 +4,131 @@ $turquoise: #1ABC9C;
 $wet-asphalt: #34495E;
 $midnight-blue: #2C3E50;
 $clouds: #ECF0F1;
+.amazing-item {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+
+.hover-content--container {
+    height: 100%;
+    left: 0;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 10% 1fr 10%;
+    overflow: hidden;
+    perspective: 1200px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.hover-content {
+    background-color: transparentize($turquoise, .1);
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    transform: rotate3d(1, 0, 0, 90deg);
+    width: 100%;
+    top: 0;
+}
+
+.dir-detect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dir {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.top {
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 50% 50%);
+}
+
+.right {
+    opacity: 0;
+    clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
+}
+
+.bottom {
+    opacity: 0;
+    clip-path: polygon(0 100%, 50% 50%, 100% 100%);
+}
+
+.left {
+    opacity: 0;
+    clip-path: polygon(0 0, 50% 50%, 0 100%);
+}
+
 .in-top {
     .dir {
         opacity: 0.4;
     }
-    .info {
+    .hover-content {
         transform-origin: 50% 0%;
         animation: in-top $duration $timing-fn 0ms 1 forwards;
-    }
-    .info--content {
-        opacity: 1;
-        transition: 300ms;
     }
 }
 
 .in-right {
-    .info {
+    .hover-content {
         transform-origin: 100% 0%;
         animation: in-right $duration $timing-fn 0ms 1 forwards;
-    }
-    .info--content {
-        opacity: 1;
-        transition: 300ms;
     }
 }
 
 .in-bottom {
-    .info {
+    .hover-content {
         transform-origin: 50% 100%;
         animation: in-bottom $duration $timing-fn 0ms 1 forwards;
-    }
-    .info--content {
-        opacity: 1;
-        transition: 300ms;
     }
 }
 
 .in-left {
-    .info {
+    .hover-content {
         transform-origin: 0% 0%;
         animation: in-left $duration $timing-fn 0ms 1 forwards;
-    }
-    .info--content {
-        opacity: 1;
-        transition: 300ms;
     }
 }
 
 .out-top {
-    .info {
+    .hover-content {
         transform-origin: 50% 0%;
         animation: out-top $duration $timing-fn 0ms 1 forwards;
     }
 }
 
 .out-right {
-    .info {
+    .hover-content {
         transform-origin: 100% 50%;
         animation: out-right $duration $timing-fn 0ms 1 forwards;
     }
 }
 
 .out-bottom {
-    .info {
+    .hover-content {
         transform-origin: 50% 100%;
         animation: out-bottom $duration $timing-fn 0ms 1 forwards;
     }
 }
 
 .out-left {
-    .info {
+    .hover-content {
         transform-origin: 0% 0%;
         animation: out-left $duration $timing-fn 0ms 1 forwards;
     }
@@ -149,76 +204,4 @@ $clouds: #ECF0F1;
     to {
         transform: rotate3d(0, 1, 0, 104deg)
     }
-}
-
-.info--container {
-    height: 100%;
-    left: 0;
-    display: grid;
-    grid-template-columns: 10% 1fr 10%;
-    grid-template-rows: 10% 1fr 10%;
-    overflow: hidden;
-    perspective: 1200px;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 0;
-}
-
-.info {
-    background-color: transparentize($turquoise, .1);
-    backface-visibility: hidden;
-    box-sizing: border-box;
-    height: 100%;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    transform: rotate3d(1, 0, 0, 90deg);
-    width: 100%;
-    top: 0;
-    z-index: 1;
-    &--content {
-        opacity: 0;
-        grid-column: 2/3;
-        grid-row: 2/3;
-        position: absolute;
-        z-index: 3;
-    }
-}
-
-.dir-detect {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-}
-
-.dir {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.top {
-    opacity: 0;
-    clip-path: polygon(0 0, 100% 0, 50% 50%);
-}
-
-.right {
-    opacity: 0;
-    clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
-}
-
-.bottom {
-    opacity: 0;
-    clip-path: polygon(0 100%, 50% 50%, 100% 100%);
-}
-
-.left {
-    opacity: 0;
-    clip-path: polygon(0 0, 50% 50%, 0 100%);
 }
