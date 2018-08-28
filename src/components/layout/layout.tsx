@@ -6,6 +6,7 @@ import headerPhoto from '../../assets/img/me.png';
 import Timeline from '../timeline/timeline';
 import Topbar from '../topbar/topbar';
 import Header from './header/header';
+import AmazingItem from './section/amazingItem'
 import SkillsSection from './section/skillsSection';
 
 import './layout.css';
@@ -64,10 +65,13 @@ export default class Layout extends React.Component<IProps> {
                     <section className={`about__education`}>
                         <h3>Wykształcenie</h3>
                         <Timeline>
-                            <Timeline.TimelineItem
-                                pin={`1`}
-                                desc={`Lorem ipsum doldipisicing elit. Provident deserunt sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
-                            />
+                            <AmazingItem>
+                                <Timeline.TimelineItem
+                                    pin={`1`}
+                                    desc={`Lorem ipsum doldipisicing elit. Provident deserunt sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}
+                                />
+                            </AmazingItem>
+
                             <Timeline.TimelineItem
                                 pin={`2`}
                                 desc={`Loisicinasdhuasht sed cupiditate excepturi reprehenderit recusandae laborum, unde est qui iure hic eius nesciunt optio sint cumque, totam nihil asperiores accusamus sunt porro quasi ab fugit! Quas officia asperiores nulla vitae, adipisci ut? Exercitationem numquam nisi dolorum reiciendis, dolor esse nulla.`}

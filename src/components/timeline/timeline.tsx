@@ -28,8 +28,6 @@ export default class Timeline extends React.Component<ITimelineProps, ITimelineS
         }
     }
 
-
-
     public componentDidMount() {
         document.addEventListener('resize', this.onWindowResizeHandler);
         this.setTimelineMode(document.body.clientWidth);
@@ -43,9 +41,7 @@ export default class Timeline extends React.Component<ITimelineProps, ITimelineS
         return (
             <div className={`timeline ${this.state.timelineMode}`}>
                 <div className="timeline__line" />
-                {/* {this.props.children} */}
                 {
-
                     React.Children.map(this.props.children, (Child: any, i: number) => {
                         let lastItemMargin = 0;
                         if (this.state.items.length > 0) {

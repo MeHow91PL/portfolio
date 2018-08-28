@@ -12,7 +12,7 @@
   grid-template-columns: 10% 1fr 10%;
   grid-template-rows: 10% 1fr 10%;
   overflow: hidden;
-  perspective: 1200px;
+  perspective: 2000px;
   position: absolute;
   width: 100%;
   top: 0; }
@@ -28,36 +28,6 @@
   transform: rotate3d(1, 0, 0, 90deg);
   width: 100%;
   top: 0; }
-
-.dir-detect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.dir {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.top {
-  opacity: 0;
-  clip-path: polygon(0 0, 100% 0, 50% 50%); }
-
-.right {
-  opacity: 0;
-  clip-path: polygon(100% 0%, 100% 100%, 50% 50%); }
-
-.bottom {
-  opacity: 0;
-  clip-path: polygon(0 100%, 50% 50%, 100% 100%); }
-
-.left {
-  opacity: 0;
-  clip-path: polygon(0 0, 50% 50%, 0 100%); }
 
 .in-top .dir {
   opacity: 0.4; }
@@ -95,49 +65,61 @@
   animation: out-left 300ms ease 0ms 1 forwards; }
 
 @keyframes in-top {
-  from {
+  0% {
     transform: rotate3d(-1, 0, 0, 90deg); }
-  to {
+  100% {
     transform: rotate3d(0, 0, 0, 0deg); } }
 
 @keyframes in-right {
-  from {
+  0% {
     transform: rotate3d(0, -1, 0, 90deg); }
-  to {
+  100% {
     transform: rotate3d(0, 0, 0, 0deg); } }
 
 @keyframes in-bottom {
-  from {
+  0% {
     transform: rotate3d(1, 0, 0, 90deg); }
-  to {
+  100% {
     transform: rotate3d(0, 0, 0, 0deg); } }
 
 @keyframes in-left {
-  from {
+  0% {
     transform: rotate3d(0, 1, 0, 90deg); }
-  to {
+  100% {
     transform: rotate3d(0, 0, 0, 0deg); } }
 
 @keyframes out-top {
-  from {
+  0% {
     transform: rotate3d(0, 0, 0, 0deg); }
-  to {
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
     transform: rotate3d(-1, 0, 0, 104deg); } }
 
 @keyframes out-right {
-  from {
+  0% {
     transform: rotate3d(0, 0, 0, 0deg); }
-  to {
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
     transform: rotate3d(0, -1, 0, 104deg); } }
 
 @keyframes out-bottom {
-  from {
+  0% {
     transform: rotate3d(0, 0, 0, 0deg); }
-  to {
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
     transform: rotate3d(1, 0, 0, 104deg); } }
 
 @keyframes out-left {
-  from {
+  0% {
     transform: rotate3d(0, 0, 0, 0deg); }
-  to {
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
     transform: rotate3d(0, 1, 0, 104deg); } }

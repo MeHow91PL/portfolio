@@ -30,7 +30,7 @@ class Section extends React.Component<ISkillProps, ISectionState>{
                         <a href="#">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae autem, vero voluptatibus a dolor natus ut modi doloribus maxime ducimus?
                             </a>
-                            <button onClick={alert} >Ello</button>
+                        <button onClick={alert} >Ello</button>
                     </div>
                 </AmazingItem>
             </div>
