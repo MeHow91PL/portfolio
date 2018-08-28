@@ -63,7 +63,6 @@ export default class Timeline extends React.Component<ITimelineProps, ITimelineS
                                 lastItemMargin = this.state.items[i].height - (2 * this.pinHeight);
                             }
                         }
-
                         return React.cloneElement(Child, { getSize: this.getInfoSize, pos: this.pos, id: i, lastItemMargin });
                     })
                 }
